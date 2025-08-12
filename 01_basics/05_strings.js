@@ -1,0 +1,34 @@
+const name = "hitesh"
+const repoCount = 50
+
+// console.log(name + repoCount + " Value") used to concat or add the string but not used in this syntax nowadays outdated should never use 
+
+console.log(`Hello my name is ${name} and my repo count is ${repoCount}`) // this is used nowadays more readable 
+
+
+const gameName = new String('hiteshhc') // new keyword is used to evoke/use objects in js 
+
+// you can get all the prototypes that you can apply on a string on the inspect->console and print any string, to make life easier some are:
+
+console.log(gameName[0])
+console.log(gameName.length)
+console.log(gameName.toUpperCase())
+console.log(gameName.charAt(2))
+console.log(gameName.indexOf('t'))
+
+const newString = gameName.substring(0,4)
+console.log(newString)
+
+const anotherString = gameName.slice(-6,4) // the last index is not included, start index = -6 + 8(length)=2 and end before index 4 therefore output is "te"
+console.log(anotherString) // negative number starts from behind/reverse order 
+
+const newStringOne = "   hitesh   "
+console.log(newStringOne)
+console.log(newStringOne.trim()) // removes the whitespaces from the string also there is trimstart() and trimend() to remove the spaces from back and front specifically
+
+const url = "https://hitesh.com/hites%20choudhary"
+console.log(url.replace('%20','-'))
+
+console.log(url.includes('sundar')) // includes or not 
+
+console.log(gameName.split('-'))
