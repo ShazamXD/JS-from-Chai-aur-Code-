@@ -50,3 +50,6 @@ so the first difference between slice and splice is the last index of range is e
 
 and Second difference is slice does not modify the original array but splice does, it removes the spliced elements from the original array
 */
+
+
+// FACT: JS is a single thread language everything inside it is a process
