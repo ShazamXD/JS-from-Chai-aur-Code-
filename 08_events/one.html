@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>htnml Events </title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>  
+            <!-- this onclick approach is not js should never be induced in html on big scale this is not good approach -->
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+</body>
+<script>
+
+    // document.getElementById('owl').onclick = function(){
+    //     alert("owl clicked");
+    // }
+     // also not a good approach because Use onclick only for simple, single handler demos or inline code. Also, it has less properties compared to eventListener and can only perform onclick event
+
+    // document.getElementById('owl').addEventListener('click', function(){
+    //     alert("owl clicked")
+    // })
+
+    // document.getElementById('owl').addEventListener('click', function(event){
+    //     console.log(event);
+    // },false)
+
+    // study of these properties of events (drop down on console)
+    // type, timestamp, defaultPrevented
+    // target, toElement, srcElement, currentTarget
+    // clientX, clientY, screenX, screenY
+    // altkey, ctrlkey, shiftkey, keyCode
+
+
+    /* Event Propogation: an event happens on element inside it travels through different phases. They are of 2 types:
+
+    -Capturing Phase (a.k.a. Trickling Down)
+    Event starts from the root (document) → goes down the DOM tree → until it reaches the target element.
+    Like: document → body → div → button.
+    You can listen in this phase if you pass { capture: true } in addEventListener
+
+    -Bubbling Phase (a.k.a. Going Up)
+    After the target, the event bubbles up the DOM tree (reverse order).
+    Like: button → div → body → document.
+    Default phase for addEventListener. or you can add 'false' jsut like in above example
+
+    You can stop propagation using:
+    event.stopPropagation() → stops event from going further
+    event.stopImmediatePropagation() → stops all other handlers too.
+    */
+
+    // document.getElementById('images').addEventListener('click', function(event){
+    //     console.log("You have clicked inside ul")
+    // },false)
+
+    // document.getElementById('owl').addEventListener('click', function(event){
+    //     console.log("owl clicked");
+    //     event.stopPropagation()
+    // },false)
+
+    /* now if you click on images id then also owl should get trigger because it is also a part of ul. The question is what will print first images or owl
+
+    -false: andar se bahar jaayega therefore owl will print first and images after
+
+    -true: bahar se andar first images will print and then images
+
+    but if u want to seperate the two and want only one to print then you can stop propagation using "event.stopPropagation()"
+
+    */
+
+
+    // document.getElementById('google').addEventListener('click', function(event){
+    //     event.preventDefault(); // will not open the google website on click which is the default function
+    //     event.stopPropagation();
+    //     console.log("google clicked");
+    // }, false) // now only google clicked will be printed on console
+
+
+
+    document.querySelector('#images').addEventListener('click', function(event){
+        const point = event.target.tagName; // it gives the HTML tag name that is IMG here
+        if(point === 'IMG'){
+            console.log(event.target.id);
+            let removeIt = event.target.parentNode // <li> will get deleted because that's the parent node
+            removeIt.remove() // to remove the element from the screen
+        }
+    })
+
+
+    
+    
+
+
+
+
+
+</script>
+</html>
