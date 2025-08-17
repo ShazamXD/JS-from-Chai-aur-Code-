@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai aur Javascript</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    // setInterval(function(){
+    //     console.log("hitesh")
+    // }, 1000) // repeatedly runs a function at a given time interval (in milliseconds).It keeps running until you stop it with clearInterval().
+
+    // const sayDate = function(str){
+    //     console.log(str, Date.now());
+    // }
+
+    // const intervalId = setInterval(sayDate, 1000, "hi") // here "hi" works as str in function
+
+    // clearInterval(intervalId) // the interval function will not run even once 
+
+
+    const say = function(){
+            console.log("Hitesh")
+        }
+
+    let shuru;
+
+    document.querySelector('#start').addEventListener('click', function(event){
+        shuru = setInterval(say,1000);
+    }, false)
+
+    document.querySelector('#stop').addEventListener('click', function(event){
+        console.log("STOPPED")
+        clearInterval(shuru); // id pass krni hoti hai main phle 'say' pass kar rha tha jo ki ek function hai isiliye error aa rha tha 
+    }, false)
+
+</script>
+
+</html>
