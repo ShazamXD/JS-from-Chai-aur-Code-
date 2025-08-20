@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React</title>
+</head>
+<body>
+    <button>Button Clicked</button>
+</body>
+<script>
+    class React {
+        constructor(){
+            this.library = "React"
+            this.server = "https://localhost:300"
+
+            //requirement
+            document
+                .querySelector('button')
+                .addEventListener('click', this.handleClick.bind(this)) 
+/* But! Without bind(this), the value of this inside handleClick would become the button element, not our class object.
+bind(this) makes sure that inside handleClick, this will always mean the class object (our React instance). 
+Because if not then server will never get printed  */
+
+        }
+        handleClick(){
+            console.log("button clicked");
+            console.log(this.server);
+        }
+    }
+
+    const app = new React()
+</script>
+</html>
+
+<!-- The bind() method in JavaScript is used to fix the value of this inside a function, no matter how or where that function is called.
+
+It returns a new function with the chosen this. -->
