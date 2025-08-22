@@ -2,15 +2,19 @@
 
 class User {
     constructor(email, password){
-        this.email = email;
-        this.password = password
+        this.email = email; // this runs the setter for email
+        this.password = password // this runs the setter for password 
     }
+
+    /* if you directly use this.password and this.email in get and set then it will cause an infinite loop because
+    race will start between constructor and setter on which will set the value first so to avoid this loop we store
+    value in a different property name like this._password and this._email */
 
     get email(){
         return this._email.toUpperCase()
     }
     set email(value){
-        this._email = value
+        this._email = value // Here the real value is saved 
     }
 
     get password(){
