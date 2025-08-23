@@ -3,7 +3,7 @@
 class User {
     constructor(email, password){
         this.email = email; // this runs the setter for email
-        this.password = password // this runs the setter for password 
+        this.password = password // this ru rd 
     }
 
     /* if you directly use this.password and this.email in get and set then it will cause an infinite loop because
