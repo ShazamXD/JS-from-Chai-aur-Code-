@@ -7,9 +7,9 @@ console.log("02" > 1)
 console.log(null>0)
 console.log(null==0)
 console.log(null>=0)
-// equity check(==) and comparisons > < >= <= works differently. Comparison convert null to a number, treating it as 0. That's why in (3)null>=0 is true and (1)null>0 is false 
+// equity check(==) and comparisons > < >= <= works differently. Comparison convert null to a number(since by default it is an objec) treating as 0. That's why in (3)null>=0 is true and (1)null>0 is false 
 
-// same happens for 'undefined' but all the statement return false since it's number datatype value is NaN
+// same happens for 'undefined' but all the statement return false since it's number datatype value is NaN(not a number)
 
 
 console.log("2"===2);

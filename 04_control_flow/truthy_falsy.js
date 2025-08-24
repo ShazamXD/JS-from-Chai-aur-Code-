@@ -58,7 +58,8 @@ if (Object.keys(emptyObj).length === 0) {
 // "object.keys(emptyObj)" returns an array of keys then we check it's length by doing ".length" to tell whether the object is empty or not  
 
 
-// NULLISH COALESCING OPERATOR(??): The nullish coalescing operator ?? in JavaScript is used to provide a default value only when the left-hand side is null or undefined because null and undefined is considered as something wrong with the code
+/* NULLISH COALESCING OPERATOR(??): The nullish coalescing operator ?? in JavaScript is used to provide a default value only when the left-hand side is 
+null or undefined because null and undefined is considered as something wrong with the code */
 
 let val1;
 // val1 = 5 ?? 10

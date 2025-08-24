@@ -13,7 +13,8 @@ const totalSum = myNums.reduce(function (accumulator, currentValue){
 
 console.log(totalSum)
 
-// accumalator store every value after each iteration of 'accumulator + currentValue'. But, since it initially don't store any value so we assign intial value '0' to it after the {} and it keeps updating with each iteration
+// accumalator store every value after each iteration of 'accumulator + currentValue'. But, since it initially don't store any value so we assign 
+// intial value '0' to it after the {} and it keeps updating with each iteration
 
 // ARROW FUNCTION
 
@@ -45,4 +46,5 @@ const shoppingCart = [
 
 const priceToPay = shoppingCart.reduce((acc, item) => acc + item.price, 0)
 
-console.log(priceToPay); // first it was showing wrong output because instead of adding concatenation happened because it wrote price as string datatype("") instead of numbers
+console.log(priceToPay); // first it was showing wrong output because instead of adding, concatenation happened because i wrote price as string 
+// datatype("") instead of numbers

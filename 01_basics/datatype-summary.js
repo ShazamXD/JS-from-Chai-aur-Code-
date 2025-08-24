@@ -2,7 +2,10 @@
 // are of 7 types: String, Number, Boolean, null, undefined, Symbol(kisi bhi value ko unique bnane ke liye use krte hai. Meaning no other Symbol value will ever be strictly equal to it), BigInt(big values are denoted with this) 
 
 
-// NOTE: JS is a dynamically typed language, this means that you don't need to specify the data type of a variable when you declare it
+/* NOTE: JS is a dynamically typed language, this means that you don't need to specify the data type of a variable when you declare it
+        The type of a variable is determined at runtime, not at compile time.
+        A variable can change its type during execution. 
+        */
 
 
 const score=100
@@ -14,7 +17,7 @@ let userEmail
 
 const id = Symbol('123')
 const anotherId=Symbol('123')
-// console.log(id===anotherId) // guaranteed no two symbol values can be strictly equal
+console.log(id===anotherId) // guaranteed "false" two symbol values can't be strictly equal
 
 
 

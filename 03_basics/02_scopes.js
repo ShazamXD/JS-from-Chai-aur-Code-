@@ -12,9 +12,9 @@ if(true){
     c = 30 // overwrites var c
    // console.log("INNER: ",a )
 }
-// console.log(a)
+console.log(a)
 // console.log(b)
-// console.log(c)
+console.log(c)
 
 
 // Nested Scopes
@@ -27,9 +27,9 @@ function one(){
         console.log(username);
     }
     // console.log(website); // nhi hoga scope ke bahar hai
-    two()
+    two() // if the above line was not commented then we won't reach to two() because it will give error in above line due to scope 
 }
-one()
+one() // don't have access to console because it is written inside two() and parent can't access child properties but visa-versa is true 
 
 
 

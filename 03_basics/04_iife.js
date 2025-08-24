@@ -10,7 +10,8 @@
     console.log(`DB CONNECTED`);
 })();
 
-// here semicolon is must to end the iife because if not then it won't be able to differentiate between functions and will consider everything after that a big function means will combine or consider all the later functions as one
+/* here semicolon is must to end the iife because if not then it won't be able to differentiate between functions and will consider everything after 
+that a big function means will combine or consider all the later functions as one */
 
 
 // Arrow function for iife 

@@ -23,10 +23,13 @@ const JsUser = {
 }
 
 console.log(JsUser.email) // this is also a method to access object values 
-console.log(JsUser["email"]) // as we know that in the background name,email and all are stored as string. So, this is also a method to access object values but u have to specify the datatype in square brackets 
-console.log(JsUser["full name"]) // square bracket method is used more because if the value of key is in string then you can't access the value without the bracket method the dot methods fails to do so 
+console.log(JsUser["email"]) /* as we know that in the background name,email and all are stored as string. So, this is also a method to access object 
+values but u have to specify the datatype in square brackets */
+console.log(JsUser["full name"]) /* square bracket method is used more because if the value of key is in string then you can't access the value without 
+the bracket method becasue dot methods fails to do so */
 
-console.log(typeof JsUser[mySym]) // symbol should always be accessed with square brackets 
+console.log(typeof JsUser[mySym]) /* symbol should always be accessed with square brackets, the key is symbol but value stored is string therefore it 
+returns string */
 
 
 JsUser.email = "hitesh@chatgpt.com" // this will overwrite the key-value in objects

@@ -2,11 +2,11 @@ const coding = ["js", "ruby", "java", "python", "cpp"]
 
 
 const values = coding.forEach( (item) => {
-    //console.log(item);
+    console.log(item);
     return item
 } )
 
-// console.log(values);
+console.log(values); // return undefined
 
 /* this returns "undefined" because forEach() is designed only for iterating over arrays — it doesn’t create a new array or collect return values.
 

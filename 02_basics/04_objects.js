@@ -1,4 +1,5 @@
-// const tinderUser = new Object() // this is an singleton object means same naam ka doosra object nhi bn skta. Ye ensure karta hai ki same resource / settings / state sab jagah share ho rahi ho.
+// const tinderUser = new Object() // this is an singleton object means same object naam ka doosra nhi bn skta. Ye ensure karta hai ki same 
+// resource / settings / state sab jagah share ho rahi ho.
 
 const tinderUser = {} // this is non-singleton or object literal
 
@@ -33,7 +34,7 @@ const obj3 = {5:"a", 6:"b"}
 // const obj4 = {obj1, obj2}
 // console.log(obj4)
 
-// const obj4 = Object.assign({}, obj1, obj2, obj3)
+// const obj4 = Object.assign({}, obj1, obj2, obj3) // object.assign(target, sources...)
 // console.log(obj4)
 
 /* '{}' is used as an empty target object so that the original objects (obj1, obj2, obj3) don’t get modified.

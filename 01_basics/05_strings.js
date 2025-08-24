@@ -29,6 +29,23 @@ console.log(newStringOne.trim()) // removes the whitespaces from the string also
 const url = "https://hitesh.com/hites%20choudhary"
 console.log(url.replace('%20','-'))
 
-console.log(url.includes('sundar')) // includes or not 
+console.log(url.includes('sundar')) // includes or not. Checks whether it has "sundar" in it or not 
 
 console.log(gameName.split('-'))
+/*
+split('-') looks for - in the string.
+Breaks the string at each - and returns an array of substrings.
+
+✔ Output:
+[ 'call', 'of', 'duty' ]
+
+✅ Key Points:
+
+If the separator is not found, the entire string is returned as a single-element array.
+console.log("hello".split('-')); // [ 'hello' ]
+
+If you use '' (empty string) as the separator, it splits every character:
+console.log("game".split('')); // [ 'g', 'a', 'm', 'e' ]
+
+You can also limit the number of splits:
+console.log("a-b-c-d".split('-', 2)); // [ 'a', 'b' ] */

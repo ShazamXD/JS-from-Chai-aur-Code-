@@ -27,13 +27,14 @@ function loginUserMessage(username = "sam"){
 }
 
 
-// console.log(loginUserMessage("")) // is empty string is passed then only "just logged in" is displayed as output
+// console.log(loginUserMessage("")) // if empty string is passed then only "just logged in" is displayed as output
 
 // console.log(loginUserMessage()) // if nothing is passed not even an empty string then it displays "undefined just logged in" in the output 
 
 // console.log(loginUserMessage("hitesh")) // now it will display proper "hitesh just logged in"
 
-// if (username == sam) is defined in the function then no whatever what "sam just logged in" will always get printed unless it is overwritten just like by "hitesh" here line 34 can also be overwritten by empty string line 30
+/* if (username == sam) is defined in the function then no whatever what "sam just logged in" will always get printed unless it is overwritten just 
+like by "hitesh" here line 34 can also be overwritten by empty string line 30 */
 
 
 // when your are making shopping cart in an website then you don't know how many items are going to be added to cart so for that 
@@ -51,12 +52,12 @@ const user = {
     price: 199
 }
 
-function handleObject(anyobject) // anyobject acts acts as a variable you can put name of the object currently executing the function
+function handleObject(anyobject) // anyobject acts as a variable you can put name of the object currently executing the function
 {
     console.log(`Username is ${anyobject.username} and price is ${anyobject.price}`);
 }
 
-(handleObject(user)) // prints the back tick statement
+handleObject(user) // prints the back tick statement
 
 // you can also declare the object with the handleObject like
 
