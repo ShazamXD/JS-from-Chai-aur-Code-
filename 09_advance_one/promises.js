@@ -7,7 +7,7 @@ const promiseOne = new Promise(function(resolve, reject){
     }, 1000)
 })
 
-promiseOne.then(function(){
+promiseOne.then(function(){  // promiseOne ho gya hai execute ab tum yeh kaam kro 
     console.log("Promise consumed");
 })
 

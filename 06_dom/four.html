@@ -14,7 +14,9 @@
     function addLanguage(langName){
         const li = document.createElement('li');
         li.innerHTML = `${langName}`;
-        document.querySelector('.language').appendChild(li) // this append child method is not very optimized because in the background the data is stored in the form of tree and 'append' will traverse the whole tree which is not very optimized way also innerHTML read whole HTML deletes the existing and overwrite the new and then append 
+        document.querySelector('.language').appendChild(li) // this append child method is not very optimized because in the background the data is 
+        // stored in the form of tree and 'append' will traverse the whole tree which is not very optimized way, also innerHTML read whole HTML, deletes 
+        // the existing and overwrite the new and then append 
     }
     addLanguage("python")
     addLanguage("typescript")
@@ -25,13 +27,15 @@
         li.appendChild(document.createTextNode(langName))
         document.querySelector('.language').appendChild(li)
     }
-    addOptiLanguage('goLang') // this is faster and more optimized because it just creates new 'li' without touching the old nodes 
+    addOptiLanguage('goLang') /* this is faster and more optimized because it just creates new 'li' without touching the old nodes and because it adds
+    text as a text node and not HTML */
 
 
     // How to edit the values 
-     const secondLang = document.querySelector("li:nth-child(2)") // this will return <li>python</li>. nth-child(2) counts from the parent’s first child, starting at 1 (not 0 like arrays).
+     const secondLang = document.querySelector("li:nth-child(2)") // this will return <li>python</li>. nth-child(2) counts from the parent’s first 
+     // child, starting at 1 (not 0 like arrays).
 
-    //  secondLang.innerHTML = "Mojo" this will also return the same output this will python to mojo
+    //  secondLang.innerHTML = "Mojo" this will also return the same output this will overwrite python to mojo
 
      const newli = document.createElement('li')
      newli.textContent = "Mojo"
@@ -45,6 +49,13 @@
      const lastLang = document.querySelector('li:last-child')
      console.log(lastLang) // wrote this just to check if i am getting the correct output 
      lastLang.remove()
+
+
+
+    //  innerHTML: when you want to change the inside content 
+    //  outerHTML: when you want to replace the whole element
+
+
 
 </script>
 </html>

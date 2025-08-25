@@ -85,7 +85,7 @@ This queue is always checked first before the normal Task Queue.
 6. Event Loop
 The Event Loop continuously checks:
 👉 Is the Call Stack empty?
-If yes → take the next callback from Microtask Queue (first) or Task Queue, and push it into the stack for execution.
+If yes → take the next callback from Microtask Queue (first) or normal Task Queue, and push it into the stack for execution.
 
 7. Execution Flow Example
 console.log("1");
@@ -96,7 +96,7 @@ console.log("4");
 Step-by-step:
 1 → Call Stack → executes immediately.
 setTimeout → sent to Web API, callback placed in Task Queue.
-Promise.resolve → result placed in Microtask Queue
+Promise.resolve → result placed in Microtask Queue (higher priority)
 4 → executes immediately.
 Event Loop: Call Stack empty → executes Microtask (3) first.
 Then executes Task Queue callback (2).

@@ -71,6 +71,7 @@
  element.style.backgroundColor = "green"
  element.style.padding = '10px'
 
- by this you change css properties of the elements or all the elements of class and id by just storing them in a variable and then replace element by variable name
+ by this you change css properties of the elements or all the elements of class and id by just storing them in a variable and then replace element by 
+ variable name
 
  */

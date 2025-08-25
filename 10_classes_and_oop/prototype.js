@@ -26,8 +26,8 @@ Array.prototype.heyHitesh = function(){
     console.log(`Hitesh says hello`);
 }
 
-// heroPower.hitesh()
-// myHeros.hitesh()
+heroPower.hitesh()
+myHeros.hitesh()
 // myHeros.heyHitesh()
 // heroPower.heyHitesh()
 
@@ -71,4 +71,4 @@ String.prototype.trueLength = function(){ // mast new function bna diya string m
 anotherUsername.trueLength()
 "hitesh".trueLength() /* now, in this what will happen is ${this} will give you 'hitesh' kyuki wo hi current context ho gya hai kyuki usi ne 
 .trueLength function ko call kiya hai and trueLength of 'hitesh'(6) will get printed because now every string can use the function trueLength() */
-"iceTea".trueLength() // same as above
+"iceTea   ".trueLength() // same as above

@@ -114,7 +114,7 @@ const submit = document.querySelector('#subt')
 const userInput = document.querySelector('#guessField')
 const guessSlot = document.querySelector('.guesses')
 const remaining = document.querySelector('.lastResult')
-const lowOrHigh = document.querySelector('.lowOrHi')
+const lowOrHigh = document.querySelector('.lowOrHigh')
 const startOver = document.querySelector('.resultParas')
 
 const p = document.createElement('p')

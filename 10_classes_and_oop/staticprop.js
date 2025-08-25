@@ -10,5 +10,5 @@ class User {
     }
 }
 
-const hitesh = new User("hitesh")
-console.log(hitesh.createId());
+const hitesh = new User("hitesh") // an instance if class User 
+console.log(hitesh.createId()); // will not get printed in output will show "not a function"

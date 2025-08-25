@@ -7,7 +7,7 @@ const UserProfile = {
         //console.log("Got user details from database"); 
         // console.log(`Username: ${this.username}`); 
         /* if you would have written only username without 'this' 
-        keyword then i would have given an error that username not defined. Since, we know that ecah function
+        keyword then it would have given an error that username not defined. Since, we know that each function
         created it's own execution context in js engine and to excess values from outside we use .this keyword
         for indicating current context variables/data. Exampel: Monday toh monday hai pr kis week ka monday ??
         so that is told using .this keyword current context */
@@ -40,7 +40,7 @@ const userOne = new User("hitesh", 12, true)
 const userTwo = new User("ChaiAurCode", 11, false) /* if both userOne and userTwo were not declared using 'new' keyword then they would have 
 overwritten each other so that's why new keyword provides them a copy on which they can work on seperately and individually */
 console.log(userOne.constructor); // print function 'User' 
-//console.log(userTwo); 
+console.log(userTwo); 
 
 
 

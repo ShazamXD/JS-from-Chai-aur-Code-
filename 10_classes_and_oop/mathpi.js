@@ -1,12 +1,12 @@
-const descripter = Object.getOwnPropertyDescriptor(Math, "PI") // gives 3 properties if it is writeable, enumerable and configurable
+const descripter = Object.getOwnPropertyDescriptor(Math, "PI") // gives 3 properties it is writeable, enumerable and configurable
 
 // there you cannot overwrite the value of PI
 
 console.log(descripter);
 
-// console.log(Math.PI);
-// Math.PI = 5
-// console.log(Math.PI);
+console.log(Math.PI);
+Math.PI = 5
+console.log(Math.PI);
 
 const chai = {
     name: 'ginger chai',
